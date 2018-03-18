@@ -1,0 +1,32 @@
+Terminal Install
+tar zxvf bcompare-4.1.9.21719.i386.tar.gz
+cd bcompare-4.1.9.21719
+sudo ./install.sh
+
+Terminal Uninstall (installed as root)
+su
+/usr/lib/beyondcompare/uninstall.sh
+
+
+/usr/lib/beyondcompare/
+拷贝libqtc.so.1和libqt-mt.so.3拷贝到/usr/local/lib/ 下。
+终端输入：
+
+  sudo cp /your_bcompare_path/libqtc.so.1 /usr/local/lib/
+
+  sudo cp /your_bcompare_path/libqt-mt.so.3 /usr/local/lib/
+
+修改so配置路径
+终端输入
+
+sudo gedit /etc/ld.so.conf
+
+在文件的尾部添加：
+include /usr/local/lib
+保存并关闭。接着在终端输入：
+
+sudo /sbin/ldconfig -v
+目的是更新配置文件。
+
+注册码
+HmB5oANygQOhaStTHNa+zOKgOeWHOkeAp6d1+QwIebz6z9kwYCm9-O0jF9F79zvzed9v5UVC4VrDkDMmTM8nB+
