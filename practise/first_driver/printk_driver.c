@@ -15,7 +15,7 @@ static dev_t devno;
 static struct class_device *printk_dev_cls;
 static unsigned int major = 250;
 static unsigned int mirror = 0;
-
+//zwl for git diff test
 
 static int printk_open(struct inode *node, struct file *file)
 {
